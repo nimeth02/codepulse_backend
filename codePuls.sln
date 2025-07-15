@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codePuls.API", "codePuls.API\codePuls.API.csproj", "{36E86B15-C51E-4364-8459-5161ED9B1117}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50C1BB8C-8151-49E6-B21C-AB5B52B990F7} = {50C1BB8C-8151-49E6-B21C-AB5B52B990F7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codePuls.Application", "codePuls.Application\codePuls.Application.csproj", "{ECCB2A4B-F5AE-46B2-B328-BAD2CE4B8D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codePuls.Domain", "codePuls.Domain\codePuls.Domain.csproj", "{C76D60FC-F460-48DB-BCBC-101B7AD9F34E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codePuls.Infrastructure", "codePuls.Infrastructure\codePuls.Infrastructure.csproj", "{50C1BB8C-8151-49E6-B21C-AB5B52B990F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codePuls.Web", "codePuls.Web\codePuls.Web\codePuls.Web.csproj", "{03B3906A-7119-4ABB-BB96-0561B11EBE8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codePuls.Web.Client", "codePuls.Web\codePuls.Web.Client\codePuls.Web.Client.csproj", "{116FAAF1-2D2B-4710-8952-CC17FD02C36F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36E86B15-C51E-4364-8459-5161ED9B1117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E86B15-C51E-4364-8459-5161ED9B1117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E86B15-C51E-4364-8459-5161ED9B1117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E86B15-C51E-4364-8459-5161ED9B1117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECCB2A4B-F5AE-46B2-B328-BAD2CE4B8D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCB2A4B-F5AE-46B2-B328-BAD2CE4B8D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCB2A4B-F5AE-46B2-B328-BAD2CE4B8D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCB2A4B-F5AE-46B2-B328-BAD2CE4B8D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76D60FC-F460-48DB-BCBC-101B7AD9F34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76D60FC-F460-48DB-BCBC-101B7AD9F34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76D60FC-F460-48DB-BCBC-101B7AD9F34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76D60FC-F460-48DB-BCBC-101B7AD9F34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C1BB8C-8151-49E6-B21C-AB5B52B990F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C1BB8C-8151-49E6-B21C-AB5B52B990F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C1BB8C-8151-49E6-B21C-AB5B52B990F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C1BB8C-8151-49E6-B21C-AB5B52B990F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B3906A-7119-4ABB-BB96-0561B11EBE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B3906A-7119-4ABB-BB96-0561B11EBE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B3906A-7119-4ABB-BB96-0561B11EBE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B3906A-7119-4ABB-BB96-0561B11EBE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116FAAF1-2D2B-4710-8952-CC17FD02C36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116FAAF1-2D2B-4710-8952-CC17FD02C36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116FAAF1-2D2B-4710-8952-CC17FD02C36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116FAAF1-2D2B-4710-8952-CC17FD02C36F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EE99869-C2DF-42A9-999E-8D3384C6A066}
+	EndGlobalSection
+EndGlobal
