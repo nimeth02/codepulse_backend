@@ -1,25 +1,17 @@
-﻿using Azure.Core;
-using codePuls.Application.Common.ResponseModels;
+﻿using codePuls.Application.Common.ResponseModels;
 using codePuls.Application.DTOs.RequestDTOs;
 using codePuls.Application.DTOs.ResponseDTOs;
 using codePuls.Application.Interfaces;
-using codePuls.Application.Services;
-using codePuls.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace codePuls.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProjectController : ControllerBase
+    public class ProjectController(ILogger<ProjectController> logger, IProjectService projectService) : ControllerBase
     {
-        private readonly IProjectService _projectService;
-        private readonly ILogger<ProjectController> _logger;
-        public ProjectController(ILogger<ProjectController> logger, IProjectService projectService)
-        {
-            _projectService = projectService;
-            _logger = logger;
-        }
+        private readonly IProjectService _projectService = projectService;
+        private readonly ILogger<ProjectController> _logger = logger;
 
         [HttpGet]
         public async Task<ActionResult> GetAllProjectsAsync()
@@ -46,8 +38,7 @@ namespace codePuls.API.Controllers
                 StatusCode = StatusCodes.Status201Created,
                 Success = true
             };
-            return StatusCode(StatusCodes.Status201Created, response);
-           
+            return Created("api/project", response);
         }
     }
 }

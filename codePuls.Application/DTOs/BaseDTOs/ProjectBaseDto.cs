@@ -1,12 +1,12 @@
 ﻿namespace codePuls.Application.DTOs.BaseDTOs
 {
-    public class ProjectBaseDto
+    public record class ProjectBaseDto
     {
-        public string ProjectName { get; set; }
-        public string NodeId { get; set; }
-        public string? AvatarUrl { get; set; }
-        public string DisplayName { get; set; }
-        public DateTime ProjectCreatedAt { get; set; }
-        public DateTime ProjectUpdatedAt { get; set; }
+        public string ProjectName { get; init; }
+        public string NodeId { get; init; }
+        public string? AvatarUrl { get; init; }
+        public string DisplayName { get; init; }
+        public DateTime ProjectCreatedAt { get; init; }
+        public DateTime ProjectUpdatedAt { get; init; }
     }
 }

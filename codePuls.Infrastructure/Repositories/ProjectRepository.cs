@@ -6,16 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace codePuls.Infrastructure.Repositories
 {
-    public class ProjectRepository : IProjectRepository
+    public class ProjectRepository(ApplicationDbContext context) : IProjectRepository
     {
+        private readonly ApplicationDbContext _context = context;
 
-        private readonly ApplicationDbContext _context;
-
-        public ProjectRepository(ApplicationDbContext context)
-        {
-            _context = context;
-        }
-        public async Task<Project> GetProjectByIdAsync(Guid id) 
+        public async Task<Project> GetProjectByIdAsync(Guid id)
         {
             try
             {
@@ -27,10 +22,8 @@ namespace codePuls.Infrastructure.Repositories
             }
         }
 
-
         public async Task<Project> GetProjectByNodeIdAsync(string nodeId)
         {
-
             try
             {
                 return await _context.Projects.FirstOrDefaultAsync(p => p.NodeId == nodeId);
@@ -40,9 +33,9 @@ namespace codePuls.Infrastructure.Repositories
                 throw RepositoryExceptionFactory.Create("GetProjectByNodeId", ex);
             }
         }
-        public async Task<IEnumerable<Project>> GetAllProjectsAsync() 
+
+        public async Task<IEnumerable<Project>> GetAllProjectsAsync()
         {
-   
             try
             {
                 return await _context.Projects.ToListAsync();
@@ -52,9 +45,9 @@ namespace codePuls.Infrastructure.Repositories
                 throw RepositoryExceptionFactory.Create("GetAllProjects", ex);
             }
         }
-        public async Task<Project> CreateProjectAsync(Project project) 
-        {
 
+        public async Task<Project> CreateProjectAsync(Project project)
+        {
             try
             {
                 await _context.Projects.AddAsync(project);
