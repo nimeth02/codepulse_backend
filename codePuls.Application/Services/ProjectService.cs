@@ -9,17 +9,10 @@ using codePuls.Application.Exeptions;
 
 namespace codePuls.Application.Services
 {
-    public class ProjectService : IProjectService
+    public class ProjectService(IProjectRepository projectRepository, ILogger<ProjectService> logger) : IProjectService
     {
-        private readonly IProjectRepository _projectRepository;
-        private readonly ILogger<ProjectService> _logger;
-
-
-        public ProjectService(IProjectRepository projectRepository, ILogger<ProjectService> logger) 
-        {
-            _projectRepository = projectRepository;
-            _logger = logger;
-        }
+        private readonly IProjectRepository _projectRepository = projectRepository;
+        private readonly ILogger<ProjectService> _logger = logger;
 
         public async Task<ProjectResponseDto> GetProjectByIdAsync(Guid id)
         {

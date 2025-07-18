@@ -1,13 +1,12 @@
-﻿using System;
-namespace codePuls.Application.DTOs.BaseDTOs
+﻿namespace codePuls.Application.DTOs.BaseDTOs
 {
-    public class UserBaseDto
+    public record class UserBaseDto
     {
-        public string UserName { get; set; }
-        public string NodeId { get; set; }
-        public string? AvatarUrl { get; set; }
-        public string DisplayName { get; set; }
-        public DateTime UserCreatedAt { get; set; }
-        public DateTime UserUpdatedAt { get; set; }
+        public string UserName { get; init; }
+        public string NodeId { get; init; }
+        public string? AvatarUrl { get; init; }
+        public string DisplayName { get; init; }
+        public DateTime UserCreatedAt { get; init; }
+        public DateTime UserUpdatedAt { get; init; }
     }
 }
