@@ -1,0 +1,73 @@
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio Code
+.vscode/
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Blazor/WebAssembly specific
+**/wwwroot/service-worker.js
+**/wwwroot/service-worker.published.js
+**/wwwroot/app.published.js
+**/wwwroot/appsettings.Development.json
+**/wwwroot/css/open-iconic/
+
+# Others
+*.min.css
+*.min.js
+*.map
+node_modules/
+TestResults/
+_NCrunch*
+ServiceFabricBackup/
+*.rptproj.bak
+.sass-cache/
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store 
+/WorkFlowAutomation.API/obj
